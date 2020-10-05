@@ -15,7 +15,7 @@ const WALL_JUMP_SPEED = 400
 
 var jumps = 0
 enum {NO_JUMP, ONE_JUMP, WALL_JUMP, TWO_JUMP}
-var current_level = WALL_JUMP
+var current_level = ONE_JUMP
 
 onready var jump_display = get_tree().get_nodes_in_group("jump display")[0]
 
@@ -31,7 +31,7 @@ func _physics_process(delta):
 	var go_right = Input.is_action_pressed("ui_right")
 	var go_up = Input.is_action_just_pressed("ui_up") or Input.is_action_just_pressed("ui_select")
 	
-	if not is_on_wall():
+	if current_level < WALL_JUMP or not is_on_wall():
 		motion.y += GRAVITY
 	else:
 		motion.y = WALL_SLIDE_SPEED
@@ -63,7 +63,7 @@ func _physics_process(delta):
 	
 	if go_up and jumps > 0:
 		jumps -= 1
-		if not is_on_wall():
+		if current_level < WALL_JUMP or not is_on_wall():
 			motion.y = JUMP_HEIGHT
 		else:
 			motion.y = WALL_JUMP_HEIGHT
