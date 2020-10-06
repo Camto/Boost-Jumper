@@ -99,6 +99,9 @@ func refresh():
 		jump_display.play("refresh2")
 	jumps = mj
 
+func upgrade():
+	current_level += 1
+
 func touch_death():
 	for i in get_slide_count():
 		var collision = get_slide_collision(i)
