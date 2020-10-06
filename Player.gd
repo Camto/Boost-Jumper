@@ -99,6 +99,9 @@ func refresh():
 		jump_display.play("refresh2")
 	jumps = mj
 
+func _ready():
+	get_node("../Blocks").set_level(level)
+
 func upgrade():
 	level += 1
 	get_node("../Blocks").set_level(level)
