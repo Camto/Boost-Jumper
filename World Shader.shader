@@ -8,5 +8,5 @@ vec4 grayscale(vec4 clr) {
 void fragment() {
 	vec4 clr = texture(TEXTURE, UV);
 	COLOR = grayscale(clr);
-	COLOR.b += COLOR.b * 0.2;
+	COLOR.b += COLOR.b * 0.1;
 }
