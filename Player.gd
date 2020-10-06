@@ -15,12 +15,12 @@ const WALL_JUMP_SPEED = 400
 
 var jumps = 0
 enum {NO_JUMP, ONE_JUMP, WALL_JUMP, TWO_JUMP}
-var current_level = ONE_JUMP
+var level = NO_JUMP
 
 onready var jump_display = get_tree().get_nodes_in_group("jump display")[0]
 
 func max_jumps():
-	match current_level:
+	match level:
 		NO_JUMP: return 0
 		ONE_JUMP: return 1
 		WALL_JUMP: return 1
@@ -31,7 +31,7 @@ func _physics_process(delta):
 	var go_right = Input.is_action_pressed("ui_right")
 	var go_up = Input.is_action_just_pressed("ui_up") or Input.is_action_just_pressed("ui_select")
 	
-	if current_level < WALL_JUMP or not is_on_wall():
+	if level < WALL_JUMP or not is_on_wall():
 		motion.y += GRAVITY
 	else:
 		motion.y = WALL_SLIDE_SPEED
@@ -58,12 +58,12 @@ func _physics_process(delta):
 	if jumps < max_jumps():
 		if is_on_floor():
 			refresh()
-		if current_level >= WALL_JUMP and is_on_wall():
+		if level >= WALL_JUMP and is_on_wall():
 			refresh()
 	
 	if go_up and jumps > 0:
 		jumps -= 1
-		if current_level < WALL_JUMP or not is_on_wall():
+		if level < WALL_JUMP or not is_on_wall():
 			motion.y = JUMP_HEIGHT
 		else:
 			motion.y = WALL_JUMP_HEIGHT
@@ -100,7 +100,8 @@ func refresh():
 	jumps = mj
 
 func upgrade():
-	current_level += 1
+	level += 1
+	get_node("../Blocks").set_level(level)
 
 func touch_death():
 	for i in get_slide_count():
