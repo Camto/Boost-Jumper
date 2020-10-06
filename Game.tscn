@@ -1,9 +1,9 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://alljumps.png" type="Texture" id=1]
-[ext_resource path="res://refresh2.png" type="Texture" id=2]
-[ext_resource path="res://ow2.png" type="Texture" id=3]
-[ext_resource path="res://refresh1.png" type="Texture" id=4]
+[ext_resource path="res://ow2.png" type="Texture" id=2]
+[ext_resource path="res://refresh1.png" type="Texture" id=3]
+[ext_resource path="res://refresh2.png" type="Texture" id=4]
 [ext_resource path="res://ow1.png" type="Texture" id=5]
 [ext_resource path="res://Player.gd" type="Script" id=6]
 [ext_resource path="res://World Material.tres" type="Material" id=7]
@@ -13,28 +13,29 @@
 [ext_resource path="res://refresher.png" type="Texture" id=11]
 [ext_resource path="res://target.png" type="Texture" id=12]
 [ext_resource path="res://Lavaball.gd" type="Script" id=13]
-[ext_resource path="res://lavaball.png" type="Texture" id=14]
+[ext_resource path="res://Bobbing Material.tres" type="Material" id=14]
+[ext_resource path="res://lavaball.png" type="Texture" id=15]
 
-[sub_resource type="SpriteFrames" id=6]
+[sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 1 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 2 ), ExtResource( 1 ) ],
-"loop": false,
-"name": "refresh2",
-"speed": 8.0
-}, {
-"frames": [ ExtResource( 3 ) ],
+"frames": [ ExtResource( 2 ) ],
 "loop": true,
 "name": "jump2",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 4 ), ExtResource( 1 ) ],
+"frames": [ ExtResource( 3 ), ExtResource( 1 ) ],
 "loop": false,
 "name": "refresh1",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 1 ) ],
+"loop": false,
+"name": "refresh2",
 "speed": 8.0
 }, {
 "frames": [ ExtResource( 5 ) ],
@@ -43,16 +44,16 @@ animations = [ {
 "speed": 1.0
 } ]
 
-[sub_resource type="StreamTexture" id=7]
+[sub_resource type="StreamTexture" id=2]
 load_path = "res://.import/block.png-b7fed0a755ada244f74f9622a987e81f.stex"
 
-[sub_resource type="RectangleShape2D" id=8]
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 16, 16 )
 
-[sub_resource type="ConvexPolygonShape2D" id=1]
+[sub_resource type="ConvexPolygonShape2D" id=4]
 points = PoolVector2Array( 16.0024, 0, 32, 32, 0, 32 )
 
-[sub_resource type="TileSet" id=2]
+[sub_resource type="TileSet" id=5]
 0/name = "spike.png 0"
 0/texture = ExtResource( 9 )
 0/tex_offset = Vector2( 0, 0 )
@@ -65,15 +66,15 @@ points = PoolVector2Array( 16.0024, 0, 32, 32, 0, 32 )
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 1 ),
+"shape": SubResource( 4 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 0/z_index = 0
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 12, 12 )
 
-[sub_resource type="TileSet" id=4]
+[sub_resource type="TileSet" id=7]
 0/name = "target.png 0"
 0/texture = ExtResource( 12 )
 0/tex_offset = Vector2( 0, 0 )
@@ -85,7 +86,7 @@ extents = Vector2( 12, 12 )
 0/shapes = [  ]
 0/z_index = 0
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 16, 16 )
 
 [node name="Game" type="Node2D"]
@@ -97,7 +98,7 @@ extents = Vector2( 16, 16 )
 ]]
 position = Vector2( 480, 320 )
 z_index = 10
-frames = SubResource( 6 )
+frames = SubResource( 1 )
 
 [node name="Player" type="KinematicBody2D" parent="."]
 position = Vector2( 2272, 2560 )
@@ -108,7 +109,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="Player"]
-texture = SubResource( 7 )
+texture = SubResource( 2 )
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 current = true
@@ -119,7 +120,7 @@ drag_margin_right = 0.02
 drag_margin_bottom = 0.15
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-shape = SubResource( 8 )
+shape = SubResource( 3 )
 
 [node name="Background" type="TileMap" parent="."]
 material = ExtResource( 7 )
@@ -134,7 +135,7 @@ tile_data = PoolIntArray( 5374010, 51, 0, 5374011, 51, 0, 5374012, 51, 0, 537401
 "death",
 ]]
 material = ExtResource( 7 )
-tile_set = SubResource( 2 )
+tile_set = SubResource( 5 )
 cell_size = Vector2( 32, 32 )
 format = 1
 tile_data = PoolIntArray( 3342392, 0, 0, 3342393, 0, 0, 3342394, 0, 0, 3342395, 0, 0, 3342396, 0, 0, 3342397, 0, 0, 3342398, 0, 0, 3342399, 0, 0, 6684843, 0, 0, 6684844, 0, 0, 6684845, 0, 0, 6684846, 0, 0, 6684847, 0, 0, 6684848, 0, 0, 6684849, 0, 0, 6684850, 0, 0, 6684851, 0, 0, 6684852, 0, 0, 6684853, 0, 0, 6684854, 0, 0, 6684855, 0, 0, 6684856, 0, 0, 6684857, 0, 0, 6684870, 0, 0, 6684871, 0, 0, 6684872, 0, 0, 6684873, 0, 0, 6684874, 0, 0, 6684875, 0, 0, 6684876, 0, 0, 6684877, 0, 0, 6684878, 0, 0, 6684879, 0, 0, 6684880, 0, 0, 6684881, 0, 0, 7012451, 0, 0, 7012452, 0, 0, 7012453, 0, 0, 7012473, 0, 0, 7012474, 0, 0, 7012475, 0, 0, 7012476, 0, 0, 7012477, 0, 0, 7012478, 0, 0, 7012479, 0, 0, 7012486, 0, 0, 7012487, 0, 0, 7012488, 0, 0, 7012489, 0, 0, 7012490, 0, 0, 7012491, 0, 0, 7012492, 0, 0, 7012493, 0, 0, 7012494, 0, 0, 7012495, 0, 0, 7012497, 0, 0, 7012498, 0, 0, 7012499, 0, 0, 7012500, 0, 0, 7012501, 0, 0, 7012502, 0, 0, 7012503, 0, 0, 7012504, 0, 0, 7012505, 0, 0, 7012506, 0, 0, 7012507, 0, 0, 7012508, 0, 0, 7012509, 0, 0, 7012510, 0, 0, 7012511, 0, 0, 7012512, 0, 0, 7012513, 0, 0, 7012514, 0, 0, 7012515, 0, 0 )
@@ -158,7 +159,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Refreshers/Refresher"]
-shape = SubResource( 3 )
+shape = SubResource( 6 )
 
 [node name="Sprite" type="Sprite" parent="Refreshers/Refresher"]
 texture = ExtResource( 11 )
@@ -175,7 +176,7 @@ target and you'll make it."
 [node name="Targets" type="TileMap" parent="."]
 scale = Vector2( 4, 4 )
 z_index = -2
-tile_set = SubResource( 4 )
+tile_set = SubResource( 7 )
 cell_size = Vector2( 8, 8 )
 format = 1
 tile_data = PoolIntArray( 6160585, 0, 0, 6291632, 0, 0 )
@@ -188,10 +189,11 @@ __meta__ = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lavaball"]
-shape = SubResource( 5 )
+shape = SubResource( 8 )
 
 [node name="Sprite" type="Sprite" parent="Lavaball"]
+material = ExtResource( 14 )
 scale = Vector2( 4, 4 )
-texture = ExtResource( 14 )
+texture = ExtResource( 15 )
 [connection signal="body_entered" from="Refreshers/Refresher" to="Refreshers/Refresher" method="_on_Refresher_body_entered"]
 [connection signal="body_entered" from="Lavaball" to="Lavaball" method="_on_Lavaball_body_entered"]
