@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=36 format=2]
 
 [ext_resource path="res://Textures/alljumps.png" type="Texture" id=1]
 [ext_resource path="res://Textures/ow2.png" type="Texture" id=2]
@@ -21,6 +21,7 @@
 [ext_resource path="res://Materials/Bobbing Material.tres" type="Material" id=19]
 [ext_resource path="res://Textures/lavaball.png" type="Texture" id=20]
 [ext_resource path="res://Scripts/Checkpoint.gd" type="Script" id=21]
+[ext_resource path="res://Textures/Light.png" type="Texture" id=22]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -97,6 +98,18 @@ extents = Vector2( 16, 16 )
 
 [sub_resource type="RectangleShape2D" id=9]
 extents = Vector2( 16, 224 )
+
+[sub_resource type="OccluderPolygon2D" id=10]
+polygon = PoolVector2Array( -16, -16, 144, -16, 144, 16, 112, 16, 112, 192, 80, 192, 80, 48, 48, 48, 48, 16, -16, 16 )
+
+[sub_resource type="OccluderPolygon2D" id=13]
+polygon = PoolVector2Array( -16, -16, 16, -16, 16, 48, -16, 48 )
+
+[sub_resource type="OccluderPolygon2D" id=11]
+polygon = PoolVector2Array( -16, -16, 80, -16, 80, 16, -16, 16 )
+
+[sub_resource type="OccluderPolygon2D" id=12]
+polygon = PoolVector2Array( -16, -16, 144, -16, 144, 176, 112, 176, 112, 80, 80, 80, 80, 48, 48, 48, 48, 16, -16, 16 )
 
 [node name="Game" type="Node2D"]
 
@@ -299,6 +312,62 @@ shape = SubResource( 9 )
 
 [node name="Spawnpoint" type="Node2D" parent="Checkpoints/Checkpoint7"]
 position = Vector2( 0, 208 )
+
+[node name="Light2D" type="Light2D" parent="."]
+position = Vector2( 4336, 3440 )
+scale = Vector2( 2.99999, 11.5 )
+texture = ExtResource( 22 )
+offset = Vector2( 0, -16 )
+range_z_max = -1
+shadow_enabled = true
+
+[node name="Light2D3" type="Light2D" parent="."]
+position = Vector2( 4496, 3440 )
+scale = Vector2( 7, 11.5 )
+texture = ExtResource( 22 )
+offset = Vector2( 0, -16 )
+range_z_max = -1
+shadow_enabled = true
+
+[node name="Light2D2" type="Light2D" parent="."]
+position = Vector2( 4696, 3440 )
+scale = Vector2( 3.49998, 11.5 )
+texture = ExtResource( 22 )
+offset = Vector2( 0, -16 )
+range_z_max = -1
+shadow_enabled = true
+
+[node name="Light2D4" type="Light2D" parent="."]
+position = Vector2( 4816, 3440 )
+scale = Vector2( 4.00001, 11.5 )
+texture = ExtResource( 22 )
+offset = Vector2( 0, -16 )
+range_z_max = -1
+shadow_enabled = true
+
+[node name="Light2D5" type="Light2D" parent="."]
+position = Vector2( 5064, 3440 )
+scale = Vector2( 11.5, 11.5 )
+texture = ExtResource( 22 )
+offset = Vector2( 0, -16 )
+range_z_max = -1
+shadow_enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+position = Vector2( 4528, 3248 )
+occluder = SubResource( 10 )
+
+[node name="LightOccluder2D4" type="LightOccluder2D" parent="."]
+position = Vector2( 4304, 3280 )
+occluder = SubResource( 13 )
+
+[node name="LightOccluder2D2" type="LightOccluder2D" parent="."]
+position = Vector2( 4784, 3152 )
+occluder = SubResource( 11 )
+
+[node name="LightOccluder2D3" type="LightOccluder2D" parent="."]
+position = Vector2( 5104, 3088 )
+occluder = SubResource( 12 )
 [connection signal="body_entered" from="Refreshers/Refresher" to="Refreshers/Refresher" method="_on_Refresher_body_entered"]
 [connection signal="body_entered" from="Lavaball" to="Lavaball" method="_on_Lavaball_body_entered"]
 [connection signal="body_entered" from="Checkpoints/Checkpoint" to="Checkpoints/Checkpoint" method="_on_Checkpoint_body_entered"]
