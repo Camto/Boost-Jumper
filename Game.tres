@@ -1,8 +1,10 @@
 [gd_resource type="TileSet" load_steps=27 format=2]
 
-[ext_resource path="res://wastes.png" type="Texture" id=1]
-[ext_resource path="res://mountain.png" type="Texture" id=2]
-[ext_resource path="res://wastes mountains boundary.png" type="Texture" id=3]
+[ext_resource path="res://Textures/wastes.png" type="Texture" id=1]
+[ext_resource path="res://Textures/mountain.png" type="Texture" id=2]
+[ext_resource path="res://Textures/wastes mountains boundary.png" type="Texture" id=3]
+
+
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 8, 0, 8, 8, 0, 8 )
