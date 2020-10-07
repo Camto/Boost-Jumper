@@ -16,7 +16,7 @@
 [ext_resource path="res://World Shader.gd" type="Script" id=14]
 [ext_resource path="res://Refresher.gd" type="Script" id=15]
 [ext_resource path="res://refresher.png" type="Texture" id=16]
-[ext_resource path="res://target.png" type="Texture" id=17]
+[ext_resource path="res://target.tres" type="Texture" id=17]
 [ext_resource path="res://Lavaball.gd" type="Script" id=18]
 [ext_resource path="res://Bobbing Material.tres" type="Material" id=19]
 [ext_resource path="res://lavaball.png" type="Texture" id=20]
@@ -81,7 +81,7 @@ points = PoolVector2Array( 16.0024, 0, 32, 32, 0, 32 )
 extents = Vector2( 12, 12 )
 
 [sub_resource type="TileSet" id=7]
-0/name = "target.png 0"
+0/name = "target.tres 0"
 0/texture = ExtResource( 17 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
@@ -208,9 +208,9 @@ target and you'll make it."
 scale = Vector2( 4, 4 )
 z_index = -2
 tile_set = SubResource( 7 )
-cell_size = Vector2( 8, 8 )
+cell_size = Vector2( 4, 4 )
 format = 1
-tile_data = PoolIntArray( 5964042, 0, 0, 6160585, 0, 0, 6291632, 0, 0 )
+tile_data = PoolIntArray( 5964042, 0, 0, 6160585, 0, 0, 6291632, 0, 0, 11928085, 0, 0, 12321171, 0, 0, 12517729, 0, 0 )
 
 [node name="Lavaball" type="Area2D" parent="."]
 position = Vector2( 2544, 3200 )
