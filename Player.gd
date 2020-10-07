@@ -98,10 +98,12 @@ func refresh():
 
 func _ready():
 	get_node("../Blocks").set_level(level)
+	$Player_Trail.set_level(level)
 
 func upgrade():
 	level += 1
 	get_node("../Blocks").set_level(level)
+	$Player_Trail.set_level(level)
 
 func touch_death():
 	for i in get_slide_count():
