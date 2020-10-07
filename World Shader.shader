@@ -8,11 +8,14 @@ vec4 grayscale(vec4 clr) {
 }
 
 void fragment() {
-	vec4 clr = texture(TEXTURE, UV);
-	if(level == uint(0)) {
-		COLOR = grayscale(clr);
+	COLOR = texture(TEXTURE, UV);
+	
+	if(COLOR.r == COLOR.g && COLOR.g == COLOR.b) {
+		COLOR.b += COLOR.b * 0.1;
+	} else if(level == uint(0)) {
+		COLOR = grayscale(COLOR);
 		COLOR.b += COLOR.b * 0.1;
 	} else {
-		COLOR = clr;
+		// Does nothing yet.
 	}
 }
