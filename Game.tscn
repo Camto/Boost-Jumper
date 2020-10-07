@@ -210,7 +210,7 @@ z_index = -2
 tile_set = SubResource( 7 )
 cell_size = Vector2( 4, 4 )
 format = 1
-tile_data = PoolIntArray( 5964042, 0, 0, 6160585, 0, 0, 6291632, 0, 0, 11928085, 0, 0, 12321171, 0, 0, 12517729, 0, 0 )
+tile_data = PoolIntArray( 11928085, 0, 0, 12321171, 0, 0, 12517729, 0, 0 )
 
 [node name="Lavaball" type="Area2D" parent="."]
 position = Vector2( 2544, 3200 )
