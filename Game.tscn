@@ -228,6 +228,7 @@ scale = Vector2( 4, 4 )
 texture = ExtResource( 20 )
 
 [node name="Checkpoints" type="Node" parent="."]
+editor/display_folded = true
 
 [node name="Checkpoint" type="Area2D" parent="Checkpoints"]
 position = Vector2( 2992, 3008 )
