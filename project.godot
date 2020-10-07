@@ -17,6 +17,7 @@ _global_script_class_icons={
 
 config/name="Boost Jumper"
 run/main_scene="res://Game.tscn"
+boot_splash/bg_color=Color( 0.792157, 0.792157, 0.792157, 1 )
 config/icon="res://icon.png"
 
 [display]
