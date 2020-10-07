@@ -15,7 +15,7 @@ const WALL_JUMP_SPEED = 400
 
 var jumps = 0
 enum {NO_JUMP, ONE_JUMP, WALL_JUMP, TWO_JUMP}
-var level = NO_JUMP
+export var level = NO_JUMP
 
 onready var jump_display = get_tree().get_nodes_in_group("jump display")[0]
 
@@ -80,11 +80,8 @@ func _physics_process(delta):
 	
 	motion = move_and_slide(motion, UP)
 
-func checkpoint(touched_checkpoint):
-	spawn = Vector2(
-		touched_checkpoint.global_position.x,
-		global_position.y
-	)
+func checkpoint(pos):
+	spawn = pos
 
 func die():
 	set_global_position(spawn)

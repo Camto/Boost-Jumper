@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://alljumps.png" type="Texture" id=1]
 [ext_resource path="res://ow2.png" type="Texture" id=2]
@@ -17,6 +17,7 @@
 [ext_resource path="res://Lavaball.gd" type="Script" id=15]
 [ext_resource path="res://Bobbing Material.tres" type="Material" id=16]
 [ext_resource path="res://lavaball.png" type="Texture" id=17]
+[ext_resource path="res://Checkpoint.gd" type="Script" id=18]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -91,6 +92,9 @@ extents = Vector2( 12, 12 )
 [sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 16, 16 )
 
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 16, 224 )
+
 [node name="Game" type="Node2D"]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -103,7 +107,7 @@ z_index = 10
 frames = SubResource( 1 )
 
 [node name="Player" type="KinematicBody2D" parent="."]
-position = Vector2( 6368, 2912 )
+position = Vector2( 2064, 432 )
 z_index = -1
 script = ExtResource( 6 )
 __meta__ = {
@@ -205,5 +209,18 @@ shape = SubResource( 8 )
 material = ExtResource( 16 )
 scale = Vector2( 4, 4 )
 texture = ExtResource( 17 )
+
+[node name="Checkpoints" type="Node" parent="."]
+
+[node name="Checkpoint" type="Area2D" parent="Checkpoints"]
+position = Vector2( 2992, 3008 )
+script = ExtResource( 18 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Checkpoints/Checkpoint"]
+shape = SubResource( 9 )
+
+[node name="Spawnpoint" type="Node2D" parent="Checkpoints/Checkpoint"]
+position = Vector2( 0, 208 )
 [connection signal="body_entered" from="Refreshers/Refresher" to="Refreshers/Refresher" method="_on_Refresher_body_entered"]
 [connection signal="body_entered" from="Lavaball" to="Lavaball" method="_on_Lavaball_body_entered"]
+[connection signal="body_entered" from="Checkpoints/Checkpoint" to="Checkpoints/Checkpoint" method="_on_Checkpoint_body_entered"]
