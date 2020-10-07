@@ -221,6 +221,72 @@ shape = SubResource( 9 )
 
 [node name="Spawnpoint" type="Node2D" parent="Checkpoints/Checkpoint"]
 position = Vector2( 0, 208 )
+
+[node name="Checkpoint2" type="Area2D" parent="Checkpoints"]
+position = Vector2( 3760, 3008 )
+script = ExtResource( 18 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Checkpoints/Checkpoint2"]
+shape = SubResource( 9 )
+
+[node name="Spawnpoint" type="Node2D" parent="Checkpoints/Checkpoint2"]
+position = Vector2( 0, 208 )
+
+[node name="Checkpoint3" type="Area2D" parent="Checkpoints"]
+position = Vector2( 4208, 3008 )
+script = ExtResource( 18 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Checkpoints/Checkpoint3"]
+shape = SubResource( 9 )
+
+[node name="Spawnpoint" type="Node2D" parent="Checkpoints/Checkpoint3"]
+position = Vector2( 0, 208 )
+
+[node name="Checkpoint4" type="Area2D" parent="Checkpoints"]
+position = Vector2( 5488, 2848 )
+script = ExtResource( 18 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Checkpoints/Checkpoint4"]
+shape = SubResource( 9 )
+
+[node name="Spawnpoint" type="Node2D" parent="Checkpoints/Checkpoint4"]
+position = Vector2( 0, 208 )
+
+[node name="Checkpoint5" type="Area2D" parent="Checkpoints"]
+position = Vector2( 6288, 2784 )
+script = ExtResource( 18 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Checkpoints/Checkpoint5"]
+shape = SubResource( 9 )
+
+[node name="Spawnpoint" type="Node2D" parent="Checkpoints/Checkpoint5"]
+position = Vector2( 0, 208 )
+
+[node name="Checkpoint6" type="Area2D" parent="Checkpoints"]
+position = Vector2( 8304, 2624 )
+script = ExtResource( 18 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Checkpoints/Checkpoint6"]
+shape = SubResource( 9 )
+
+[node name="Spawnpoint" type="Node2D" parent="Checkpoints/Checkpoint6"]
+position = Vector2( 0, 208 )
+
+[node name="Checkpoint7" type="Area2D" parent="Checkpoints"]
+position = Vector2( 9008, 2688 )
+script = ExtResource( 18 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Checkpoints/Checkpoint7"]
+shape = SubResource( 9 )
+
+[node name="Spawnpoint" type="Node2D" parent="Checkpoints/Checkpoint7"]
+position = Vector2( 0, 208 )
 [connection signal="body_entered" from="Refreshers/Refresher" to="Refreshers/Refresher" method="_on_Refresher_body_entered"]
 [connection signal="body_entered" from="Lavaball" to="Lavaball" method="_on_Lavaball_body_entered"]
 [connection signal="body_entered" from="Checkpoints/Checkpoint" to="Checkpoints/Checkpoint" method="_on_Checkpoint_body_entered"]
+[connection signal="body_entered" from="Checkpoints/Checkpoint2" to="Checkpoints/Checkpoint2" method="_on_Checkpoint_body_entered"]
+[connection signal="body_entered" from="Checkpoints/Checkpoint3" to="Checkpoints/Checkpoint3" method="_on_Checkpoint_body_entered"]
+[connection signal="body_entered" from="Checkpoints/Checkpoint4" to="Checkpoints/Checkpoint4" method="_on_Checkpoint_body_entered"]
+[connection signal="body_entered" from="Checkpoints/Checkpoint5" to="Checkpoints/Checkpoint5" method="_on_Checkpoint_body_entered"]
+[connection signal="body_entered" from="Checkpoints/Checkpoint6" to="Checkpoints/Checkpoint6" method="_on_Checkpoint_body_entered"]
+[connection signal="body_entered" from="Checkpoints/Checkpoint7" to="Checkpoints/Checkpoint7" method="_on_Checkpoint_body_entered"]
