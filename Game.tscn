@@ -614,13 +614,12 @@ position = Vector2( 6704, 3024 )
 occluder = SubResource( 9 )
 
 [node name="Player" type="KinematicBody2D" parent="."]
-position = Vector2( 14144, 2800 )
+position = Vector2( 2064, 432 )
 z_index = -1
 script = ExtResource( 8 )
 __meta__ = {
 "_edit_group_": true
 }
-level = 1
 
 [node name="Sprite" type="Sprite" parent="Player"]
 texture = ExtResource( 9 )
