@@ -422,7 +422,7 @@ shape = SubResource( 18 )
 position = Vector2( 0, 32 )
 
 [node name="Checkpoint23" type="Area2D" parent="Checkpoints"]
-position = Vector2( 22352, 1744 )
+position = Vector2( 22288, 1744 )
 script = ExtResource( 6 )
 __meta__ = {
 "_edit_group_": true
