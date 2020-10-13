@@ -1,10 +1,10 @@
 [gd_resource type="ParticlesMaterial" load_steps=3 format=2]
 
-[sub_resource type="Gradient" id=19]
+[sub_resource type="Gradient" id=1]
 colors = PoolColorArray( 0.319025, 0.023837, 0.023837, 1, 0.262207, 0.262207, 0.262207, 1 )
 
-[sub_resource type="GradientTexture" id=20]
-gradient = SubResource( 19 )
+[sub_resource type="GradientTexture" id=2]
+gradient = SubResource( 1 )
 
 [resource]
 emission_shape = 2
@@ -14,8 +14,7 @@ spread = 20.89
 gravity = Vector3( -120, 0, 0 )
 initial_velocity = 180.0
 initial_velocity_random = 0.25
-angular_velocity = 0.0
 orbit_velocity = 0.0
 orbit_velocity_random = 0.0
 scale = 4.0
-color_ramp = SubResource( 20 )
+color_ramp = SubResource( 2 )
