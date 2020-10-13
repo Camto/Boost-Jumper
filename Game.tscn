@@ -892,6 +892,132 @@ color = Color( 1, 0.701961, 0, 1 )
 range_z_max = -1
 shadow_enabled = true
 
+[node name="Light2D58" type="Light2D" parent="Lighting"]
+position = Vector2( 18404, 2704 )
+scale = Vector2( 5.25016, 11.5 )
+texture = ExtResource( 7 )
+offset = Vector2( 0, -16 )
+color = Color( 1, 0.701961, 0, 1 )
+range_z_max = -1
+shadow_enabled = true
+
+[node name="Light2D59" type="Light2D" parent="Lighting"]
+position = Vector2( 18588, 2704 )
+scale = Vector2( 6.24989, 11.5 )
+texture = ExtResource( 7 )
+offset = Vector2( 0, -16 )
+color = Color( 1, 0.701961, 0, 1 )
+range_z_max = -1
+shadow_enabled = true
+
+[node name="Light2D60" type="Light2D" parent="Lighting"]
+position = Vector2( 18752, 2704 )
+scale = Vector2( 4.00003, 11.5 )
+texture = ExtResource( 7 )
+offset = Vector2( 0, -16 )
+color = Color( 1, 0.701961, 0, 1 )
+range_z_max = -1
+shadow_enabled = true
+
+[node name="Light2D61" type="Light2D" parent="Lighting"]
+position = Vector2( 19552, 2704 )
+scale = Vector2( 4.00006, 11.5 )
+texture = ExtResource( 7 )
+offset = Vector2( 0, -16 )
+color = Color( 1, 0.701961, 0, 1 )
+range_z_max = -1
+shadow_enabled = true
+
+[node name="Light2D64" type="Light2D" parent="Lighting"]
+position = Vector2( 19904, 2704 )
+scale = Vector2( 4.00006, 11.5 )
+texture = ExtResource( 7 )
+offset = Vector2( 0, -16 )
+color = Color( 1, 0.701961, 0, 1 )
+range_z_max = -1
+shadow_enabled = true
+
+[node name="Light2D65" type="Light2D" parent="Lighting"]
+position = Vector2( 20512, 2704 )
+scale = Vector2( 4, 11.5 )
+texture = ExtResource( 7 )
+offset = Vector2( 0, -16 )
+color = Color( 1, 0.701961, 0, 1 )
+range_z_max = -1
+shadow_enabled = true
+
+[node name="Light2D66" type="Light2D" parent="Lighting"]
+position = Vector2( 20208, 2704 )
+scale = Vector2( 14.9999, 11.5 )
+texture = ExtResource( 7 )
+offset = Vector2( 0, -16 )
+color = Color( 1, 0.701961, 0, 1 )
+range_z_max = -1
+shadow_enabled = true
+
+[node name="Light2D67" type="Light2D" parent="Lighting"]
+position = Vector2( 20976, 2640 )
+scale = Vector2( 9.00002, 11.5 )
+texture = ExtResource( 7 )
+offset = Vector2( 0, -16 )
+color = Color( 1, 0.701961, 0, 1 )
+range_z_max = -1
+shadow_enabled = true
+
+[node name="Light2D68" type="Light2D" parent="Lighting"]
+position = Vector2( 21360, 2640 )
+scale = Vector2( 15.0001, 11.5 )
+texture = ExtResource( 7 )
+offset = Vector2( 0, -16 )
+color = Color( 1, 0.701961, 0, 1 )
+range_z_max = -1
+shadow_enabled = true
+
+[node name="Light2D69" type="Light2D" parent="Lighting"]
+position = Vector2( 21856, 2320 )
+scale = Vector2( 8.00008, 11.5 )
+texture = ExtResource( 7 )
+offset = Vector2( 0, -16 )
+color = Color( 1, 0.701961, 0, 1 )
+range_z_max = -1
+shadow_enabled = true
+
+[node name="Light2D70" type="Light2D" parent="Lighting"]
+position = Vector2( 22112, 2320 )
+scale = Vector2( 8.00004, 11.5 )
+texture = ExtResource( 7 )
+offset = Vector2( 0, -16 )
+color = Color( 1, 0.701961, 0, 1 )
+range_z_max = -1
+shadow_enabled = true
+
+[node name="Light2D71" type="Light2D" parent="Lighting"]
+position = Vector2( 22512, 2320 )
+scale = Vector2( 17, 11.5 )
+texture = ExtResource( 7 )
+offset = Vector2( 0, -16 )
+color = Color( 1, 0.701961, 0, 1 )
+range_z_max = -1
+shadow_enabled = true
+
+[node name="Light2D63" type="Light2D" parent="Lighting"]
+position = Vector2( 19376, 2704 )
+scale = Vector2( 7.00004, 11.5 )
+texture = ExtResource( 7 )
+offset = Vector2( 0, -16 )
+color = Color( 1, 0.701961, 0, 1 )
+range_z_max = -1
+shadow_enabled = true
+
+[node name="Light2D62" type="Light2D" parent="Lighting"]
+position = Vector2( 19168, 2704 )
+scale = Vector2( 6.00003, 11.5 )
+texture = ExtResource( 7 )
+offset = Vector2( 0, -16 )
+color = Color( 1, 0.701961, 0, 1 )
+range_z_max = -1
+shadow_enabled = true
+
 [node name="Light2D57" type="Light2D" parent="Lighting"]
 position = Vector2( 17568, 2736 )
 scale = Vector2( 15, 11.5 )
@@ -1024,6 +1150,22 @@ occluder = SubResource( 4 )
 position = Vector2( 17936, 2512 )
 occluder = SubResource( 4 )
 
+[node name="LightOccluder2D40" type="LightOccluder2D" parent="Lighting"]
+position = Vector2( 18352, 2544 )
+occluder = SubResource( 4 )
+
+[node name="LightOccluder2D41" type="LightOccluder2D" parent="Lighting"]
+position = Vector2( 18800, 2448 )
+occluder = SubResource( 4 )
+
+[node name="LightOccluder2D44" type="LightOccluder2D" parent="Lighting"]
+position = Vector2( 19600, 2512 )
+occluder = SubResource( 4 )
+
+[node name="LightOccluder2D45" type="LightOccluder2D" parent="Lighting"]
+position = Vector2( 19856, 2480 )
+occluder = SubResource( 4 )
+
 [node name="LightOccluder2D38" type="LightOccluder2D" parent="Lighting"]
 position = Vector2( 17072, 2512 )
 occluder = SubResource( 4 )
@@ -1038,6 +1180,10 @@ occluder = SubResource( 24 )
 
 [node name="LightOccluder2D31" type="LightOccluder2D" parent="Lighting"]
 position = Vector2( 15888, 2832 )
+occluder = SubResource( 24 )
+
+[node name="LightOccluder2D43" type="LightOccluder2D" parent="Lighting"]
+position = Vector2( 19088, 2512 )
 occluder = SubResource( 24 )
 
 [node name="LightOccluder2D22" type="LightOccluder2D" parent="Lighting"]
@@ -1070,6 +1216,18 @@ occluder = SubResource( 8 )
 
 [node name="LightOccluder2D9" type="LightOccluder2D" parent="Lighting"]
 position = Vector2( 15088, 2896 )
+occluder = SubResource( 8 )
+
+[node name="LightOccluder2D46" type="LightOccluder2D" parent="Lighting"]
+position = Vector2( 20496, 2416 )
+occluder = SubResource( 8 )
+
+[node name="LightOccluder2D47" type="LightOccluder2D" parent="Lighting"]
+position = Vector2( 20848, 2416 )
+occluder = SubResource( 8 )
+
+[node name="LightOccluder2D48" type="LightOccluder2D" parent="Lighting"]
+position = Vector2( 21744, 2128 )
 occluder = SubResource( 8 )
 
 [node name="LightOccluder2D23" type="LightOccluder2D" parent="Lighting"]
@@ -1114,6 +1272,14 @@ occluder = SubResource( 9 )
 
 [node name="LightOccluder2D21" type="LightOccluder2D" parent="Lighting"]
 position = Vector2( 10224, 2864 )
+occluder = SubResource( 9 )
+
+[node name="LightOccluder2D42" type="LightOccluder2D" parent="Lighting"]
+position = Vector2( 18672, 2416 )
+occluder = SubResource( 9 )
+
+[node name="LightOccluder2D49" type="LightOccluder2D" parent="Lighting"]
+position = Vector2( 22064, 2064 )
 occluder = SubResource( 9 )
 
 [node name="LightOccluder2D15" type="LightOccluder2D" parent="Lighting"]
