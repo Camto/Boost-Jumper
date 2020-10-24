@@ -5,3 +5,5 @@
 [resource]
 shader = ExtResource( 1 )
 shader_param/level = 1
+shader_param/red_replace = Color( 0.541, 0, 0, 1 )
+shader_param/opacity = 0.5

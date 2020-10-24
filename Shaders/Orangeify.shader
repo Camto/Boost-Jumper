@@ -17,7 +17,5 @@ vec3 blendLighten(vec3 base, vec3 blend, float op) {
 
 void fragment() {
 	COLOR = texture(TEXTURE, UV);
-	if(COLOR.a != 0.0) {
-		COLOR = vec4(blendLighten(COLOR.rgb, bg_color.rgb, opacity), 1.0);
-	}
+	COLOR = vec4(blendLighten(COLOR.rgb, bg_color.rgb, opacity), COLOR.a);
 }
